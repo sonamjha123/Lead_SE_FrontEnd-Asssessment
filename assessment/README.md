@@ -1,70 +1,21 @@
-# Getting Started with Create React App
+Please create a small SPA application. Framework: react or vue. Builder: vue-cli, webpack, vite of your choice.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+You need two pages. 
+Pages must have their own route. When you enter the page address in the URL, it should open correctly.
 
-## Available Scripts
-
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+1. Dashboard page (/)
+2. List of loading elements (/list)
+ 
+There are also 2 more components on the dashboard page:
+   1. Button to go to the list page (/list).
+   2. List of items (favorites) saved in the application state.
+ 
+* When moving from the dashboard page to the list page, the list of elements from: "https://jsonplaceholder.typicode.com/albums/1/photos?_page=1&_limit=10" is loaded. When you scroll down, the list loads automatically.
+* Each element displays id, title, image, add to favorites button (changes state if already in favorites)
+* The list page has its own “back” button to return to the dashboard (/). When we press the back button, we return to the dashboard and see the updated data (favorites). If we go to the list again, the list is in the state in which the list was the last time we visited (if we already went to it and scrolled). Elements retain their state and, upon further scrolling down, continue to be loaded, taking into account those already loaded.
+ 
+Design doesn't matter. Just carefully arrange the styles to your taste. The styles themselves should be written in SCSS.
+ 
+It will be a plus if the task is written in TS and covered with some tests.
+ 
+At the end, commit it to any public repository (GitHub for example) and send a link to us.
