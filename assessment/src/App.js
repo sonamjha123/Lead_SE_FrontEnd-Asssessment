@@ -1,8 +1,8 @@
-import logo from "./logo.svg";
+
 import "./App.css";
 import { Routes, Route, Outlet, Link } from "react-router-dom";
-import Lists from "./pages/Lists";
-import Dashboard from "./pages/Dashboard";
+import Lists from "./components/Lists";
+import Dashboard from "./components/Dashboard";
 import { useState } from "react";
 
 function App() {
